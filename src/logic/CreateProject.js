@@ -71,7 +71,7 @@ const CreateProject=(title,description,todos=[])=>{
         sortByPriority,
         sortByDueDate,
         sortByDateAdded
-    }
-    
-    
+    }   
 }
+
+export default CreateProject;
