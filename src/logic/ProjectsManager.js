@@ -4,20 +4,23 @@ import CreateTodo from "./CreateTodo";
 let projects=[];
 let currentProject=null;
 
-const AddProject=(name,description="")=>{
-    const newProject=CreateProject(name,description,[]);
+const AddProject=(n,d="")=>{
+    const newProject=CreateProject(n,d,[]);
     projects.push(newProject);
 }
-const setCurrentProjectWithId=(id)=>{
-    current=projects[id];
-}
-const deleteProjectWithId=(id)=>{
-    projects.filter(idx=>idx!=id);
-}
-const getProjects=()=>{
-    return projects;
-}
+const setCurrentProjectWithId=id=>current=projects[id];
 
-const CurrentProject=()=>{
-    return CurrentProject;
+const deleteProjectWithId=id=>projects.filter(idx=>idx!=id);
+
+const getProjects=()=>projects;
+
+
+const updateCurrentProjectInfo=(t,d)=>currentProject.updateProjectDetails(t,d);
+
+const CurrentProjectAddTodo=(t,d,date)=>{
+    const newTodo=CreateTodo(t,d,date,(new Date()).getTime());
+    currentProject.addTodo(newTodo);
 }
+const CurrentProjectRemoveTodo=id=>currentProject.removeTodo(id);
+
+const CurrentProjectGetTodo=id=>currentProject.getTodoByID;

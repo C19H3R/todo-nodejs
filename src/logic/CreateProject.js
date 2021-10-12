@@ -8,7 +8,7 @@ const CreateProject=(title,description,todos=[])=>{
 
     const addTodo=(todo)=>projectTodos.push(todo);
     const removeTodo=(toRemove)=>projectTodos.filter(i=>i!=toRemove);
-    
+    const getTodoByID=id=>projectTodos[id];
     //Priority Sort
     const HIGH="high";
     const MEDIUM="medum";
@@ -67,6 +67,7 @@ const CreateProject=(title,description,todos=[])=>{
         get todos(){projectTodos},
         addTodo,
         removeTodo,
+        getTodoByID,
         updateProjectDetails,
         sortByPriority,
         sortByDueDate,
