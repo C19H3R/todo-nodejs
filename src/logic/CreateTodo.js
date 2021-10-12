@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 
-const CreateTodo=(title,description,duedate,isDone=false,priority="low",dateAdded="")=>{
+const CreateTodo=(title,description,duedate,dateAdded="",isDone=false,priority="low")=>{
     let todoTitle=title;
     let todoDescription=description;
     let todoDueDate=duedate;
