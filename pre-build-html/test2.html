@@ -53,19 +53,23 @@
         <div class="add-new-proj">
           <img src="../assets/add_black_24dp.svg" />
         </div>
-        <div class="new-proj-form">
-            <h2>Add New Project</h2>
-                <div>
-                    <span>Title</span>
-                    <input/>
-                </div>
-                <div>
-                    <span>Description</span>
-                    <input/>
-                </div>
-                <div>
-                <button>Create</button>
-                </div>                
+      </div>
+      <div class="new-proj-form-card">
+        <div>
+          <h2>Add New Project</h2>
+        </div>
+        <div id="new-proj-form">
+          <label for="project-title-input" class="project-label">Title</label>
+          <input id="project-title-input" type="text" />
+
+          <label for="project-description-input" class="project-label"
+            >Description</label
+          >
+          <!-- <input id="project-description-input" type="text"> -->
+          <textarea id="project-description-input"></textarea>
+        </div>
+        <div id="create-project-btn-div">
+          <button id="create-new-project-btn">Ceate</button>
         </div>
       </div>
     </main>
