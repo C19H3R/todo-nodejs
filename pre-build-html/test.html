@@ -5,112 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oxygen"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Todo-APP</h1>
-    </header>
-    <main>
-      <div id="project-view">
-        <div id="project-view-header">
-          <h2>Project One</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
-            fugit facilis iste voluptate! Repellendus ducimus reprehenderit
-            minima ad quia iusto provident ab alias libero exercitationem, fugit
-            autem officiis nemo corrupti?
-          </p>
-        </div>
-        <div id="project-view-main">
-          <div id="project-view-menu">
-            <div id="project-view-menu-sorting">
-              <span class="sort-options">Priority </span>
-              <span class="sort-options" id="sort-option-active">
-                Due Date
-              </span>
-              <span class="sort-options">Date Added</span>
-            </div>
-            <div id="project-view-menu-info-viewer">
-              <h3>Todo 1</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                quod blanditiis facilis animi. Blanditiis distinctio fugiat nam.
-                Cum incidunt dolor non exercitationem consequatur tenetur
-                maiores. Saepe nemo doloremque ullam. Blanditiis!
-              </p>
-              <div>
-                <button>Done</button>
-              </div>
-            </div>
-            <!-- <div id="project-view-menu-info-editor"></div> -->
+    <div style="margin: 0; width: 100%; height: 100%">
+      <header>
+        <h1>Todo-APP</h1>
+      </header>
+      <main>
+        <div id="project-view">
+          <div id="project-view-header">
+            <h2>Project One</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum
+              fugit facilis iste voluptate! Repellendus ducimus reprehenderit
+              minima ad quia iusto provident ab alias libero exercitationem,
+              fugit autem officiis nemo corrupti?
+            </p>
           </div>
-          <div id="project-view-todos">
-            <div class="todo-div">
-              <div>
-                <img
-                  src="../assets/radio_button_unchecked_black_24dp.svg"
-                  class="todo-check-uncheck"
-                  z
-                />
-                <span class="todo-text">asdf sdfg</span>
+          <div id="project-view-main">
+            <div id="project-view-menu">
+              <div id="project-view-menu-sorting">
+                <span class="sort-options">Priority </span>
+                <span class="sort-options" id="sort-option-active">
+                  Due Date
+                </span>
+                <span class="sort-options">Date Added</span>
               </div>
-
-              <div>
-                <span>10/10/21</span>
-                <img src="../assets/edit_black_24dp.svg" class="edit-todo" />
-                <img
-                  src="../assets/delete_forever_black_24dp.svg"
-                  class="delete-todo"
-                />
+              <div id="project-view-menu-info-viewer">
+                <h3>Todo 1</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Fugit quod blanditiis facilis animi. Blanditiis distinctio
+                  fugiat nam. Cum incidunt dolor non exercitationem consequatur
+                  tenetur maiores. Saepe nemo doloremque ullam. Blanditiis!
+                </p>
+                <div>
+                  <button id="todo-done-btn">Done</button>
+                </div>
               </div>
+              <!-- <div id="project-view-menu-info-editor">
+                <h3>Create Todo</h3>
+                <div id="todo-editor-form">
+                  <label>Title</label>
+                  <input />
+                  <label>Description</label>
+                  <textarea></textarea>
+                  <div id="todo-editor-form-priority-radio">
+                    <label
+                      ><input name="priority" value="Low" type="radio" />Lo</label
+                    >
+                    <label
+                      ><input
+                        name="priority"
+                        value="Med"
+                        type="radio"
+                        checked
+                      />Med</label
+                    >
+                    <label
+                      ><input
+                        name="priority"
+                        value="High"
+                        type="radio"
+                      />Hi</label
+                    >
+                  </div>
+                </div>
+                <button id="todo-edit-btn">Create</button>
+              </div> -->
             </div>
-            <div class="todo-div">
-              <div>
-                <img
-                  src="../assets/check_circle_black_24dp.svg"
-                  class="todo-check-uncheck"
-                />
-                <span class="todo-text">asdf sdfg</span>
-              </div>
+            <div id="project-view-todos">
+              <div class="todo-div">
+                <div>
+                  <img
+                    src="../assets/radio_button_unchecked_black_24dp.svg"
+                    class="todo-check-uncheck"
+                    z
+                  />
+                  <span class="todo-text">asdf sdfg</span>
+                </div>
 
-              <div>
-                <span>10/10/21</span>
-                <img src="../assets/edit_black_24dp.svg" class="edit-todo" />
-                <img
-                  src="../assets/delete_forever_black_24dp.svg"
-                  class="delete-todo"
-                />
+                <div>
+                  <span>10/10/21</span>
+                  <img src="../assets/edit_black_24dp.svg" class="edit-todo" />
+                  <img
+                    src="../assets/delete_forever_black_24dp.svg"
+                    class="delete-todo"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="todo-div">
-              <div>
-                <img
-                  src="../assets/check_circle_black_24dp.svg"
-                  class="todo-check-uncheck"
-                />
-                <span class="todo-text">asdf sdfg</span>
-              </div>
+              <div class="todo-div">
+                <div>
+                  <img
+                    src="../assets/check_circle_black_24dp.svg"
+                    class="todo-check-uncheck"
+                  />
+                  <span class="todo-text">asdf sdfg</span>
+                </div>
 
-              <div>
-                <span>10/10/21</span>
-                <img src="../assets/edit_black_24dp.svg" class="edit-todo" />
-                <img
-                  src="../assets/delete_forever_black_24dp.svg"
-                  class="delete-todo"
-                />
+                <div>
+                  <span>10/10/21</span>
+                  <img src="../assets/edit_black_24dp.svg" class="edit-todo" />
+                  <img
+                    src="../assets/delete_forever_black_24dp.svg"
+                    class="delete-todo"
+                  />
+                </div>
               </div>
-            </div>
-            <div id="add-new-todo">
-              <img src="../assets/add_black_24dp.svg" />
+              <div class="todo-div">
+                <div>
+                  <img
+                    src="../assets/check_circle_black_24dp.svg"
+                    class="todo-check-uncheck"
+                  />
+                  <span class="todo-text">asdf sdfg</span>
+                </div>
+
+                <div>
+                  <span>10/10/21</span>
+                  <img src="../assets/edit_black_24dp.svg" class="edit-todo" />
+                  <img
+                    src="../assets/delete_forever_black_24dp.svg"
+                    class="delete-todo"
+                  />
+                </div>
+              </div>
+              <div id="add-new-todo">
+                <img src="../assets/add_black_24dp.svg" />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <p>Made By <a href="/">c19H3R</a></p>
-    </footer>
+      </main>
+      <footer>
+        <p>Made By <a href="/">c19H3R</a></p>
+      </footer>
+    </div>
   </body>
 </html>
