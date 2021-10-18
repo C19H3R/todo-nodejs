@@ -80,6 +80,13 @@ footer {
   background: bisque;
   box-shadow: 13px 13px 0px #000000;
   border-radius: 24px 0 0 24px;
+  animation: flyin;
+  animation-duration: 0;
+}
+@keyframes flyin {
+  0% {
+    right: -400px;
+  }
 }
 .new-proj-form-card h2 {
   width: 80%;

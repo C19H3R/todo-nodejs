@@ -1,3 +1,4 @@
+import AddProjectForm from "../components/primitive/AddProjectForm.js"
 
 
 const Page=(middle)=>{
@@ -9,7 +10,8 @@ const Page=(middle)=>{
 
     //middle
     const middleElement=document.createElement("main");
-        // middleElement.appendChild(middle);
+         middleElement.appendChild(middle);
+        //  middleElement.appendChild(AddProjectForm())
 
     //footer
     const footerEle=document.createElement("footer")

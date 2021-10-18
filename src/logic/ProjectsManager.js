@@ -1,5 +1,5 @@
-import CreateProject from "./CreateProject";
-import CreateTodo from "./CreateTodo";
+import CreateProject from "./CreateProject.js";
+import CreateTodo from "./CreateTodo.js";
 
 let projects=[];
 let currentProject=null;
@@ -24,3 +24,9 @@ const CurrentProjectAddTodo=(t,d,date)=>{
 const CurrentProjectRemoveTodo=id=>currentProject.removeTodo(id);
 
 const CurrentProjectGetTodo=id=>currentProject.getTodoByID;
+
+export{
+    AddProject,setCurrentProjectWithId,deleteProjectWithId,getProjects,updateCurrentProjectInfo,
+    CurrentProjectAddTodo,
+    CurrentProjectRemoveTodo,CurrentProjectGetTodo
+}
