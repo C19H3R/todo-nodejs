@@ -1,10 +1,12 @@
 import { compareAsc } from "date-fns";
+import { DATE_ADDED, DUE_DATE, PRIOTITY } from "../utility/SortingOptions.js";
 
 
 const CreateProject=(title,description,todos=[])=>{
     let projectTitle=title;
     let projectTodos=todos;
     let projectDescription=description;
+    let sortType=DATE_ADDED;
 
     const addTodo=(todo)=>projectTodos.push(todo);
     const removeTodo=(toRemove)=>projectTodos.filter(i=>i!=toRemove);
@@ -34,6 +36,7 @@ const CreateProject=(title,description,todos=[])=>{
     }
     const sortByPriority=()=>{
         projectTodos.sort(_comparePriority);
+        sortType=PRIOTITY;
         return projectTodos;
     }
 
@@ -43,6 +46,7 @@ const CreateProject=(title,description,todos=[])=>{
     }
     const sortByDueDate=()=>{
         projectTodos.sort(_compareDueDates);
+        sortType=DUE_DATE;
         return projectTodos;
     }
 
@@ -52,19 +56,22 @@ const CreateProject=(title,description,todos=[])=>{
     }
     const sortByDateAdded=()=>{
         projectTodos.sort(_compareDateAdded);
+        sortType=DATE_ADDED;
         return projectTodos;
     }
 
     const updateProjectDetails=(title,description=projectDescription)=>{
         projectDescription=description;
         projectTitle=title;
+
     }
 
     return {
         get title(){return projectTitle;},
         get description(){return projectDescription},
         set title(val){projectTitle=val},
-        get todos(){projectTodos},
+        get todos(){return projectTodos},
+        get sortOrder(){return sortType},
         addTodo,
         removeTodo,
         getTodoByID,

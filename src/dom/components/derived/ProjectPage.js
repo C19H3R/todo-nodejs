@@ -1,4 +1,5 @@
-import { getProjects } from "../../../logic/ProjectsManager.js";
+import { getProjects, setCurrentProjectWithId } from "../../../logic/ProjectsManager.js";
+import ReloadPage from "../../../utility/ReloadPage.js";
 import AddProjectCard from "../primitive/AddProjectCard.js";
 import AddProjectForm from "../primitive/AddProjectForm.js";
 import ProjectCard from "../primitive/ProjectCard.js";
@@ -12,8 +13,13 @@ const ProjectPage = ()=>{
     projectFlexBox.classList.add("projects-flexbox");
 
 
-    ProjectsArr.forEach((proj)=>{
-        projectFlexBox.appendChild(ProjectCard(proj.title,proj.description))
+    ProjectsArr.forEach((proj,idx)=>{
+        const currCard=ProjectCard(proj.title,proj.description)
+        projectFlexBox.appendChild(currCard)
+        currCard.addEventListener("click",()=>{
+            setCurrentProjectWithId(idx);
+            ReloadPage();
+        })
     })
     const AddProjCard=AddProjectCard();
     AddProjCard.addEventListener("click",()=>{
