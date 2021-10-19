@@ -62,6 +62,11 @@ const AddProjectForm=()=>{
             ButtonEle.addEventListener("click",HandleSubmit);
         ButtonDiv.appendChild(ButtonEle);
 
+    const closeBtnDiv=document.createElement("div");
+    closeBtnDiv.innerHTML=`<img src="../assets/add_black_24dp.svg">`;
+    closeBtnDiv.id="new-proj-form-card-close-btn";
+    closeBtnDiv.addEventListener("click",ReloadPage)
+    FormDiv.appendChild(closeBtnDiv);
     FormDiv.appendChild(FromHeading);
     FormDiv.appendChild(ProjectForm);
     FormDiv.appendChild(ButtonDiv);
