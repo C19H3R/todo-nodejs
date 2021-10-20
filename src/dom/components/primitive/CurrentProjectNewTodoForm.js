@@ -1,5 +1,18 @@
+import { CurrentProjectAddTodo } from "../../../logic/ProjectsManager.js"
+import ReloadPage from "../../../utility/ReloadPage.js";
 
 const CurrentProjectNewTodoForm=()=>{
+
+  let newTodoTitle=""
+  let newTodoDescription=""
+
+
+
+  const handleSubmit = ()=>{
+    CurrentProjectAddTodo(newTodoTitle,newTodoDescription,new Date());
+    ReloadPage()
+  }
+
     const mainDiv=document.createElement("div");
     mainDiv.id="project-view-menu-info-editor"
         const formHeading=document.createElement("h3")
@@ -9,9 +22,11 @@ const CurrentProjectNewTodoForm=()=>{
           const titleLabel=document.createElement("label")
           titleLabel.textContent="Title"
           const titleInpt=document.createElement("input")
+          titleInpt.addEventListener("change",(e)=>newTodoTitle= e.target.value)
           const descLabel=document.createElement("label")
           descLabel.textContent="Title"
           const descInpt=document.createElement("textarea")
+          descInpt.addEventListener("change",(e)=>newTodoDescription=e.target.value)
 
           formDiv.appendChild(titleLabel)
           formDiv.appendChild(titleInpt)
@@ -46,6 +61,7 @@ const CurrentProjectNewTodoForm=()=>{
         const submitButton=document.createElement("button")
         submitButton.textContent="Create"
         submitButton.id="todo-edit-btn"
+        submitButton.addEventListener("click",handleSubmit)
 
         mainDiv.appendChild(formHeading)
         mainDiv.appendChild(formDiv)
