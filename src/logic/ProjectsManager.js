@@ -76,11 +76,14 @@ const setCurrentProjectMode=(mode)=>{
     currentProjectMode=mode;
 }
 
-const 
+const getCurrentProjectTodos=()=>{
+    return currentProject.todos;
+}
+
 export{
     
     AddProject,setCurrentProjectWithId,deleteProjectWithId,getProjects,updateCurrentProjectInfo,
     CurrentProjectAddTodo,
     CurrentProjectRemoveTodo,CurrentProjectGetTodo,getCurrentProjectInfo
-    ,isCurrentProjectSet,setCurrentTodoWithID,markCurrentTodo,getCurrentTodoStatus,getCurrentSortMode,sortCurrentProject
+    ,isCurrentProjectSet,setCurrentTodoWithID,markCurrentTodo,getCurrentTodoStatus,getCurrentSortMode,sortCurrentProject,getCurrentProjectTodos
 }

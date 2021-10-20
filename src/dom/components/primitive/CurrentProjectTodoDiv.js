@@ -1,3 +1,4 @@
+import { getCurrentProjectTodos } from "../../../logic/ProjectsManager.js";
 
 
 const CurrentProjectTodoDiv = ()=>{
@@ -37,7 +38,6 @@ const CurrentProjectTodoDiv = ()=>{
 
         return todoBar;
     }
-    
 
     const addNewTodoButton =document.createElement("div")
     addNewTodoButton.id="add-new-todo"
