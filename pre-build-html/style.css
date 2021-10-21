@@ -27,7 +27,7 @@ footer {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .test {
@@ -84,7 +84,7 @@ footer {
   animation: flyin;
   animation-duration: 0;
 }
-#new-proj-form-card-close-btn{
+#new-proj-form-card-close-btn {
   position: fixed;
   right: 30px;
   top: 15px;
@@ -156,6 +156,14 @@ footer {
   background-color: white;
   border-radius: 12px;
   box-shadow: 13px 13px 0px #000000;
+  position: relative;
+}
+#go-to-home-page {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transform: scale(2);
+  cursor: pointer;
 }
 #project-view-header {
   margin: 0 auto;
@@ -225,12 +233,29 @@ footer {
   border-radius: 10px;
   font-weight: bolder;
 }
+
 #todo-done-btn:hover {
   background-color: rgb(0, 212, 0);
 }
 #todo-done-btn:active {
   box-shadow: 0px 0px 10px 1px black inset;
 }
+#todo-undone-btn {
+  background-color: rgb(223, 28, 28);
+  border: 0px;
+  padding: 10px;
+  width: 100px;
+  font-size: medium;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+#todo-undone-btn:hover {
+  background-color: rgba(233, 110, 110, 0.568);
+}
+#todo-undone-btn:active {
+  box-shadow: 0px 0px 10px 1px black inset;
+}
+
 #project-view-menu-info-editor {
   position: relative;
   background-color: bisque;
@@ -242,12 +267,12 @@ footer {
 #project-view-menu-info-editor #todo-editor-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
 }
 #project-view-menu-info-editor #todo-editor-form input,
 #project-view-menu-info-editor #todo-editor-form textarea,
 #project-view-menu-info-editor #todo-editor-form label {
-  padding: 10px;
+  padding: 5px;
 }
 #project-view-menu-info-editor #todo-editor-form input,
 #project-view-menu-info-editor #todo-editor-form textarea {
@@ -255,7 +280,7 @@ footer {
   border: 0px;
 }
 #project-view-menu-info-editor #todo-editor-form textarea {
-  height: 100px;
+  height: 75px;
   resize: none;
 }
 #todo-editor-form #todo-editor-form-priority-radio {
@@ -313,6 +338,15 @@ footer {
   justify-content: space-between;
   align-content: center;
 }
+.todo-div-low-priority {
+  background-color: rgba(73, 236, 73, 0.37) !important;
+}
+.todo-div-med-priority {
+  background-color: rgba(73, 211, 236, 0.37) !important ;
+}
+.todo-div-high-priority {
+  background-color: rgba(252, 92, 92, 0.37) !important;
+}
 #project-view-todos #add-new-todo {
   width: 350px;
   text-align: center;
@@ -333,4 +367,13 @@ footer {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+#delete-btn {
+  position: absolute;
+  background: aliceblue;
+  border-radius: 2px;
+  right: 30px;
+  top: 30px;
+  transform: scale(2);
 }

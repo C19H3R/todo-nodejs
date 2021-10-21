@@ -1,4 +1,5 @@
 import { compareAsc } from "date-fns";
+import { HIGH, LOW, MED } from "../utility/priorityOptions.js";
 import { DATE_ADDED, DUE_DATE, PRIOTITY } from "../utility/SortingOptions.js";
 
 const CreateProject = (title, description, todos = []) => {
@@ -14,24 +15,22 @@ const CreateProject = (title, description, todos = []) => {
   };
   const getTodoByID = (id) => projectTodos[id];
   //Priority Sort
-  const HIGH = "high";
-  const MEDIUM = "medum";
-  const LOW = "low";
+
   const _getPriorityIdx = (priority) => {
     switch (priority) {
       case HIGH:
         return 1;
-      case MEDIUM:
+      case MED:
         return 0;
       case LOW:
         return -1;
     }
   };
   const _comparePriority = (a, b) => {
-    if (_getPriorityIdx(a) > _getPriorityIdx(b)) {
+    if (_getPriorityIdx(a.priority) < _getPriorityIdx(b.priority)) {
       return 1;
     }
-    if (_getPriorityIdx(a) < _getPriorityIdx(b)) {
+    if (_getPriorityIdx(a) > _getPriorityIdx(b)) {
       return -1;
     }
     return 0;
@@ -44,7 +43,7 @@ const CreateProject = (title, description, todos = []) => {
 
   //DueDate Sort
   const _compareDueDates = (a, b) => {
-    return compareAsc(a.dueDate, b.dueDate);
+    return compareAsc(a.dueDateISO, b.dueDateISO);
   };
   const sortByDueDate = () => {
     projectTodos.sort(_compareDueDates);
@@ -54,7 +53,7 @@ const CreateProject = (title, description, todos = []) => {
 
   //DateAdded Sort
   const _compareDateAdded = (a, b) => {
-    return compareAsc(a.dateAdded, b.dateAdded);
+    return compareAsc(a.dateAddedISO, b.dateAddedISO);
   };
   const sortByDateAdded = () => {
     projectTodos.sort(_compareDateAdded);
