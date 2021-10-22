@@ -63,7 +63,7 @@ const AddProjectForm=()=>{
         ButtonDiv.appendChild(ButtonEle);
 
     const closeBtnDiv=document.createElement("div");
-    closeBtnDiv.innerHTML=`<img src="../assets/add_black_24dp.svg">`;
+    closeBtnDiv.innerHTML=`<img src="https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/add_black_24dp.svg">`;
     closeBtnDiv.id="new-proj-form-card-close-btn";
     closeBtnDiv.addEventListener("click",ReloadPage)
     FormDiv.appendChild(closeBtnDiv);

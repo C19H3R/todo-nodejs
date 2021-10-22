@@ -37,8 +37,8 @@ const CurrentProjectTodoDiv = () => {
     const leftPart = document.createElement("div");
     const checkbox = document.createElement("img");
 
-    if (isDone) checkbox.src = "../assets/check_circle_black_24dp.svg";
-    else checkbox.src = "../assets/radio_button_unchecked_black_24dp.svg";
+    if (isDone) checkbox.src = "https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/check_circle_black_24dp.svg";
+    else checkbox.src = "https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/radio_button_unchecked_black_24dp.svg";
 
     checkbox.classList.add("todo-check-uncheck");
     checkbox.addEventListener("click", () => {
@@ -59,14 +59,14 @@ const CurrentProjectTodoDiv = () => {
     const dateSpan = document.createElement("span");
     dateSpan.textContent = dueDate;
     const editButton = document.createElement("img");
-    editButton.src = "../assets/edit_black_24dp.svg";
+    editButton.src = "https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/edit_black_24dp.svg";
     editButton.addEventListener("click", () => {
       setCurrentProjectMode(EDIT, idx);
       ReloadPage();
     });
     editButton.classList.add("edit-todo");
     const deletButton = document.createElement("img");
-    deletButton.src = "../assets/delete_forever_black_24dp.svg";
+    deletButton.src = "https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/delete_forever_black_24dp.svg";
     deletButton.classList.add("delete-todo");
     deletButton.addEventListener("click", () => {
       CurrentProjectRemoveTodo(idx);
@@ -95,7 +95,7 @@ const CurrentProjectTodoDiv = () => {
     ReloadPage();
   });
   addNewTodoButton.id = "add-new-todo";
-  addNewTodoButton.innerHTML = `<img src="../assets/add_black_24dp.svg" />`;
+  addNewTodoButton.innerHTML = `<img src="https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/add_black_24dp.svg" />`;
   mainDiv.appendChild(addNewTodoButton);
   return mainDiv;
 };

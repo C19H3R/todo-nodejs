@@ -20,7 +20,7 @@ const Page = (middle) => {
 
   const deleteLocalStorageDiv = document.createElement("div");
   const deleteImg = document.createElement("img");
-  deleteImg.src = "../assets/delete_forever_black_24dp.svg";
+  deleteImg.src = "https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/delete_forever_black_24dp.svg";
   deleteLocalStorageDiv.appendChild(deleteImg);
   deleteLocalStorageDiv.id = "delete-btn";
   deleteLocalStorageDiv.addEventListener("click", () => {

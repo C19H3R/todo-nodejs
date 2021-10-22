@@ -16,7 +16,7 @@ const CurrentProjectPage = () => {
   const backButton = document.createElement("div");
   backButton.id = "go-to-home-page";
   const btnImage = document.createElement("img");
-  btnImage.src = "../assets/arrow_back_black_24dp.svg";
+  btnImage.src = "https://raw.githubusercontent.com/C19H3R/todo-nodejs/main/assets/arrow_back_black_24dp.svg";
   backButton.appendChild(btnImage);
   btnImage.addEventListener("click", () => {
     unsetCurrentProject();
