@@ -99,10 +99,14 @@ const getCurrentProjectTodos = () => {
 const getCurrentTodoInfo = () => {
   return getTodoInfoWithID(currentTodo);
 };
+const updateSavedData = () => {
+  setAllData(projects);
+};
 const updateCurrentTodo = (t, d, date, priority) => {
   const currTodo = currentProject.getTodoByID(currentTodo);
 
   currTodo.updateAll(t, d, date, priority);
+  setAllData(projects);
 };
 const getTodoInfoWithID = (id) => {
   const currTodo = currentProject.getTodoByID(id);
@@ -154,4 +158,5 @@ export {
   unsetCurrentProject,
   updateCurrentTodo,
   deleteAllProjects,
+  updateSavedData,
 };

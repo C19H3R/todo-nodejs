@@ -1,4 +1,5 @@
 import { format } from "date-fns";
+import { updateSavedData } from "./ProjectsManager.js";
 
 const CreateTodo = (
   title,
@@ -29,7 +30,7 @@ const CreateTodo = (
     todoDescription = description;
     todoDueDate = dueDate;
     todoPriority = priority;
-    setAllData(projects);
+    updateSavedData();
   };
 
   return {
@@ -59,7 +60,7 @@ const CreateTodo = (
       return todoIsDone;
     },
     set isDone(val) {
-      setAllData(projects);
+      updateSavedData();
       todoIsDone = val;
     },
     updateAll,
